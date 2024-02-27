@@ -13,6 +13,12 @@
 		8CA0E0E32B8E3D6400A4DAEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CA0E0E12B8E3D6400A4DAEF /* Main.storyboard */; };
 		8CA0E0E52B8E3D6500A4DAEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CA0E0E42B8E3D6500A4DAEF /* Assets.xcassets */; };
 		8CA0E0E82B8E3D6500A4DAEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CA0E0E62B8E3D6500A4DAEF /* LaunchScreen.storyboard */; };
+		8CF688362B8E4E6000A5D3C7 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF688352B8E4E6000A5D3C7 /* NetworkManager.swift */; };
+		8CF688382B8E4E6F00A5D3C7 /* NetworkUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF688372B8E4E6F00A5D3C7 /* NetworkUtil.swift */; };
+		8CF6883B2B8E4EB500A5D3C7 /* FlightResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF6883A2B8E4EB500A5D3C7 /* FlightResponse.swift */; };
+		8CF6883E2B8E4EED00A5D3C7 /* FlightViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF6883D2B8E4EED00A5D3C7 /* FlightViewModel.swift */; };
+		8CF688412B8E617000A5D3C7 /* FlightsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF6883F2B8E617000A5D3C7 /* FlightsTableViewCell.swift */; };
+		8CF688422B8E617000A5D3C7 /* FlightsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CF688402B8E617000A5D3C7 /* FlightsTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,12 @@
 		8CA0E0E42B8E3D6500A4DAEF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8CA0E0E72B8E3D6500A4DAEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8CA0E0E92B8E3D6500A4DAEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8CF688352B8E4E6000A5D3C7 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		8CF688372B8E4E6F00A5D3C7 /* NetworkUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkUtil.swift; sourceTree = "<group>"; };
+		8CF6883A2B8E4EB500A5D3C7 /* FlightResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightResponse.swift; sourceTree = "<group>"; };
+		8CF6883D2B8E4EED00A5D3C7 /* FlightViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightViewModel.swift; sourceTree = "<group>"; };
+		8CF6883F2B8E617000A5D3C7 /* FlightsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsTableViewCell.swift; sourceTree = "<group>"; };
+		8CF688402B8E617000A5D3C7 /* FlightsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FlightsTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +68,45 @@
 		8CA0E0DA2B8E3D6400A4DAEF /* SwiftApi */ = {
 			isa = PBXGroup;
 			children = (
+				8CF6883C2B8E4ED700A5D3C7 /* features */,
+				8CF688392B8E4EA700A5D3C7 /* model */,
+				8CF688342B8E4E4500A5D3C7 /* network */,
 				8CA0E0DB2B8E3D6400A4DAEF /* AppDelegate.swift */,
+				8CF6883F2B8E617000A5D3C7 /* FlightsTableViewCell.swift */,
+				8CF688402B8E617000A5D3C7 /* FlightsTableViewCell.xib */,
 				8CA0E0DD2B8E3D6400A4DAEF /* SceneDelegate.swift */,
-				8CA0E0DF2B8E3D6400A4DAEF /* ViewController.swift */,
 				8CA0E0E12B8E3D6400A4DAEF /* Main.storyboard */,
 				8CA0E0E42B8E3D6500A4DAEF /* Assets.xcassets */,
 				8CA0E0E62B8E3D6500A4DAEF /* LaunchScreen.storyboard */,
 				8CA0E0E92B8E3D6500A4DAEF /* Info.plist */,
 			);
 			path = SwiftApi;
+			sourceTree = "<group>";
+		};
+		8CF688342B8E4E4500A5D3C7 /* network */ = {
+			isa = PBXGroup;
+			children = (
+				8CF688352B8E4E6000A5D3C7 /* NetworkManager.swift */,
+				8CF688372B8E4E6F00A5D3C7 /* NetworkUtil.swift */,
+			);
+			path = network;
+			sourceTree = "<group>";
+		};
+		8CF688392B8E4EA700A5D3C7 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				8CF6883A2B8E4EB500A5D3C7 /* FlightResponse.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		8CF6883C2B8E4ED700A5D3C7 /* features */ = {
+			isa = PBXGroup;
+			children = (
+				8CA0E0DF2B8E3D6400A4DAEF /* ViewController.swift */,
+				8CF6883D2B8E4EED00A5D3C7 /* FlightViewModel.swift */,
+			);
+			path = features;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +168,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8CA0E0E82B8E3D6500A4DAEF /* LaunchScreen.storyboard in Resources */,
+				8CF688422B8E617000A5D3C7 /* FlightsTableViewCell.xib in Resources */,
 				8CA0E0E52B8E3D6500A4DAEF /* Assets.xcassets in Resources */,
 				8CA0E0E32B8E3D6400A4DAEF /* Main.storyboard in Resources */,
 			);
@@ -138,6 +181,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CF6883B2B8E4EB500A5D3C7 /* FlightResponse.swift in Sources */,
+				8CF688412B8E617000A5D3C7 /* FlightsTableViewCell.swift in Sources */,
+				8CF688382B8E4E6F00A5D3C7 /* NetworkUtil.swift in Sources */,
+				8CF6883E2B8E4EED00A5D3C7 /* FlightViewModel.swift in Sources */,
+				8CF688362B8E4E6000A5D3C7 /* NetworkManager.swift in Sources */,
 				8CA0E0E02B8E3D6400A4DAEF /* ViewController.swift in Sources */,
 				8CA0E0DC2B8E3D6400A4DAEF /* AppDelegate.swift in Sources */,
 				8CA0E0DE2B8E3D6400A4DAEF /* SceneDelegate.swift in Sources */,
