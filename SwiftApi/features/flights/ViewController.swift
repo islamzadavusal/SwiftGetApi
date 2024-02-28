@@ -88,22 +88,6 @@ extension ViewController : UITableViewDelegate {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* var str = "Merhaba dünya"
  let data = str.data(using: .utf8)
  print(data)
