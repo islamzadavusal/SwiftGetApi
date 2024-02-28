@@ -13,11 +13,17 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    var cellIdentifier : String = "FlightsTableViewCell"
+    
     override func viewDidLoad() {
             super.viewDidLoad()
             
             // View yüklendiğinde verileri getirmek için fetchData() fonksiyonunu çağırır
             fetchData()
+        
+        let nib = UINib(nibName: "FlightsTableViewCell", bundle: Bundle.main)
+        tableView.register(nib, forCellReuseIdentifier: cellIdentifier)
+        
         }
         
         // Verileri getirmek için viewModel'den getList() fonksiyonunu çağırır
@@ -39,7 +45,9 @@ class ViewController: UIViewController {
         
         // Veri alındığında yapılacak işleri işler
         func handleSuccess() {
-            // Eğer gerekliyse, başarılı durumda yapılacak işlemleri buraya ekleyebilirsiniz
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
         }
         
         // Veri alınamadığında yapılacak işleri işler
@@ -48,6 +56,52 @@ class ViewController: UIViewController {
             print("network error: \(error)")
         }
     }
+
+extension ViewController : UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.itemCount
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as! FlightsTableViewCell
+        cell.configure(viewModel: viewModel.getViewModel(for: indexPath.row))
+        
+    
+        return cell
+    }
+    
+    
+}
+
+extension ViewController : UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* var str = "Merhaba dünya"

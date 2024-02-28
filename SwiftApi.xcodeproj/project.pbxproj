@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C7EACBB2B8F94E700D7D6A9 /* FlightsSearchUIData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7EACBA2B8F94E700D7D6A9 /* FlightsSearchUIData.swift */; };
+		8C7EACBF2B8F980200D7D6A9 /* FlightsCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7EACBE2B8F980200D7D6A9 /* FlightsCellViewModel.swift */; };
+		8C7EACC12B8FA38100D7D6A9 /* FlightUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7EACC02B8FA38100D7D6A9 /* FlightUseCase.swift */; };
+		8C7EACC42B8FB40200D7D6A9 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 8C7EACC32B8FB40200D7D6A9 /* Kingfisher */; };
 		8CA0E0DC2B8E3D6400A4DAEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA0E0DB2B8E3D6400A4DAEF /* AppDelegate.swift */; };
 		8CA0E0DE2B8E3D6400A4DAEF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA0E0DD2B8E3D6400A4DAEF /* SceneDelegate.swift */; };
 		8CA0E0E02B8E3D6400A4DAEF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA0E0DF2B8E3D6400A4DAEF /* ViewController.swift */; };
@@ -22,6 +26,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8C7EACBA2B8F94E700D7D6A9 /* FlightsSearchUIData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsSearchUIData.swift; sourceTree = "<group>"; };
+		8C7EACBE2B8F980200D7D6A9 /* FlightsCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsCellViewModel.swift; sourceTree = "<group>"; };
+		8C7EACC02B8FA38100D7D6A9 /* FlightUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightUseCase.swift; sourceTree = "<group>"; };
 		8CA0E0D82B8E3D6400A4DAEF /* SwiftApi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftApi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CA0E0DB2B8E3D6400A4DAEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8CA0E0DD2B8E3D6400A4DAEF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,12 +50,33 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C7EACC42B8FB40200D7D6A9 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8C7EACBC2B8F97BF00D7D6A9 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				8CF6883F2B8E617000A5D3C7 /* FlightsTableViewCell.swift */,
+				8CF688402B8E617000A5D3C7 /* FlightsTableViewCell.xib */,
+				8C7EACBE2B8F980200D7D6A9 /* FlightsCellViewModel.swift */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		8C7EACBD2B8F97C800D7D6A9 /* flights */ = {
+			isa = PBXGroup;
+			children = (
+				8CA0E0DF2B8E3D6400A4DAEF /* ViewController.swift */,
+				8CF6883D2B8E4EED00A5D3C7 /* FlightViewModel.swift */,
+				8C7EACC02B8FA38100D7D6A9 /* FlightUseCase.swift */,
+			);
+			path = flights;
+			sourceTree = "<group>";
+		};
 		8CA0E0CF2B8E3D6400A4DAEF = {
 			isa = PBXGroup;
 			children = (
@@ -72,8 +100,6 @@
 				8CF688392B8E4EA700A5D3C7 /* model */,
 				8CF688342B8E4E4500A5D3C7 /* network */,
 				8CA0E0DB2B8E3D6400A4DAEF /* AppDelegate.swift */,
-				8CF6883F2B8E617000A5D3C7 /* FlightsTableViewCell.swift */,
-				8CF688402B8E617000A5D3C7 /* FlightsTableViewCell.xib */,
 				8CA0E0DD2B8E3D6400A4DAEF /* SceneDelegate.swift */,
 				8CA0E0E12B8E3D6400A4DAEF /* Main.storyboard */,
 				8CA0E0E42B8E3D6500A4DAEF /* Assets.xcassets */,
@@ -96,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				8CF6883A2B8E4EB500A5D3C7 /* FlightResponse.swift */,
+				8C7EACBA2B8F94E700D7D6A9 /* FlightsSearchUIData.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -103,8 +130,8 @@
 		8CF6883C2B8E4ED700A5D3C7 /* features */ = {
 			isa = PBXGroup;
 			children = (
-				8CA0E0DF2B8E3D6400A4DAEF /* ViewController.swift */,
-				8CF6883D2B8E4EED00A5D3C7 /* FlightViewModel.swift */,
+				8C7EACBD2B8F97C800D7D6A9 /* flights */,
+				8C7EACBC2B8F97BF00D7D6A9 /* cell */,
 			);
 			path = features;
 			sourceTree = "<group>";
@@ -125,6 +152,9 @@
 			dependencies = (
 			);
 			name = SwiftApi;
+			packageProductDependencies = (
+				8C7EACC32B8FB40200D7D6A9 /* Kingfisher */,
+			);
 			productName = SwiftApi;
 			productReference = 8CA0E0D82B8E3D6400A4DAEF /* SwiftApi.app */;
 			productType = "com.apple.product-type.application";
@@ -153,6 +183,9 @@
 				Base,
 			);
 			mainGroup = 8CA0E0CF2B8E3D6400A4DAEF;
+			packageReferences = (
+				8C7EACC22B8FB40200D7D6A9 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 8CA0E0D92B8E3D6400A4DAEF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -183,9 +216,12 @@
 			files = (
 				8CF6883B2B8E4EB500A5D3C7 /* FlightResponse.swift in Sources */,
 				8CF688412B8E617000A5D3C7 /* FlightsTableViewCell.swift in Sources */,
+				8C7EACBB2B8F94E700D7D6A9 /* FlightsSearchUIData.swift in Sources */,
 				8CF688382B8E4E6F00A5D3C7 /* NetworkUtil.swift in Sources */,
 				8CF6883E2B8E4EED00A5D3C7 /* FlightViewModel.swift in Sources */,
+				8C7EACC12B8FA38100D7D6A9 /* FlightUseCase.swift in Sources */,
 				8CF688362B8E4E6000A5D3C7 /* NetworkManager.swift in Sources */,
+				8C7EACBF2B8F980200D7D6A9 /* FlightsCellViewModel.swift in Sources */,
 				8CA0E0E02B8E3D6400A4DAEF /* ViewController.swift in Sources */,
 				8CA0E0DC2B8E3D6400A4DAEF /* AppDelegate.swift in Sources */,
 				8CA0E0DE2B8E3D6400A4DAEF /* SceneDelegate.swift in Sources */,
@@ -411,6 +447,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8C7EACC22B8FB40200D7D6A9 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.11.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8C7EACC32B8FB40200D7D6A9 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8C7EACC22B8FB40200D7D6A9 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8CA0E0D02B8E3D6400A4DAEF /* Project object */;
 }

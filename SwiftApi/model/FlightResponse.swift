@@ -9,14 +9,14 @@ import Foundation
 
 
 struct FlightResponse: Codable {
-    let data: FlightDatResponse
+    let data: FlightDataResponse
 }
 
-class FlightDatResponse: Codable {
+class FlightDataResponse: Codable {
     let airlines: [Airline]
     let airports: [Airport]
     let stopCounts, baggages: [Int]
-    let hasViFlight: Bool
+
     let searchURL, shortSearchURL: String
     let flights: Flights
 
@@ -24,7 +24,7 @@ class FlightDatResponse: Codable {
         case airlines, airports
         case stopCounts = "stop_counts"
         case baggages
-        case hasViFlight = "has_vi_flight"
+
         case searchURL = "search_url"
         case shortSearchURL = "short_search_url"
         case flights = "flights"
